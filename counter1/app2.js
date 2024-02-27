@@ -21,7 +21,6 @@ btns.forEach(function(btn){
         if(counter<0){
             value.style.color = "red";
         }
-
         value.textContent = counter;
     });
 });
