@@ -92,7 +92,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 
 
-  
+  //filterbtns
   const filterBtns = document. querySelectorAll(".filter-btn");
   filterBtns.forEach(function(btn){
     btn.addEventListener('click',function(e){
