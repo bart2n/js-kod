@@ -75,12 +75,12 @@ const menu = [
 
 const sectionCenter = document.querySelector(".section-center");
 const container = document.querySelector(".btn-container");
-const filterBtns = document. querySelectorAll(".filter-btn");
+
 
 window.addEventListener("DOMContentLoaded", function() {
   displayMenuItems(menu);
   const categories = menu.reduce(function(values, item) {
-    if (!value.includes(item.category)) {
+    if (!values.includes(item.category)) {
       values.push(item.category);
     }
     return values;
@@ -89,12 +89,12 @@ window.addEventListener("DOMContentLoaded", function() {
     return `<button class="filter-btn" data-id="${category}">${category}</button>`;
   }).join("");
   container.innerHTML = categoryBtns;
-});
 
 
 
-
-filterBtns.forEach(function(btn){
+  
+  const filterBtns = document. querySelectorAll(".filter-btn");
+  filterBtns.forEach(function(btn){
     btn.addEventListener('click',function(e){
     const category = e.currentTarget.dataset.id;
     const menuCategory = menu.filter(function(menuItem){
@@ -110,6 +110,12 @@ filterBtns.forEach(function(btn){
     }
     });
 });
+});
+
+
+
+
+
 
 function displayMenuItems(menuItems){
   let displayMenu = menuItems.map(function(item){
